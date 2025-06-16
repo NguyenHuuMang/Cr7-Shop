@@ -10,7 +10,7 @@ const ContactInfo = () => {
               <i className="fas fa-phone-alt"></i>
             </div>
             <h5>Support 24/7</h5>
-            <p>0336950023</p>
+            <p>0868694377</p>
           </div>
         </div>
         <div className="col-12 col-md-4 contact-Box">
@@ -28,7 +28,7 @@ const ContactInfo = () => {
               <i className="fas fa-envelope"></i>
             </div>
             <h5>Email</h5>
-            <p>nhmang.17@gmail.com</p>
+            <p>dangtienqqqq@gmail.com</p>
           </div>
         </div>
       </div>

@@ -26,7 +26,7 @@ const PlaceOrderScreen = () => {
                   <strong>Customer</strong>
                 </h5>
                 <p>Mang Dep Trai</p>
-                <p>nhmang.17@gmail.com</p>
+                <p>dangtienqqqq@gmail.com</p>
               </div>
             </div>
           </div>

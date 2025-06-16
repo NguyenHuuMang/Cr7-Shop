@@ -1,35 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Pagination = () => {
+const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
+  if (totalPages <= 1) return null;
+
+  const handleClick = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const pages = [...Array(totalPages).keys()].map((x) => x + 1);
+
   return (
-    <nav>
+    <nav className="mt-4">
       <ul className="pagination justify-content-center">
-        <li className={`page-item active`}>
-          <Link className="page-link" to={"#"}>
-            1
-          </Link>
-        </li>
-        <li className={`page-item`}>
-          <Link className="page-link" to={"#"}>
-            2
-          </Link>
-        </li>
-        <li className={`page-item`}>
-          <Link className="page-link" to={"#"}>
-            3
-          </Link>
-        </li>
-        <li className={`page-item`}>
-          <Link className="page-link" to={"#"}>
-            4
-          </Link>
-        </li>
-        <li className={`page-item`}>
-          <Link className="page-link" to={"#"}>
-            5
-          </Link>
-        </li>
+        {pages.map((page) => (
+          <li
+            key={page}
+            className={`page-item ${page === currentPage ? "active" : ""}`}
+          >
+            <button className="page-link" onClick={() => handleClick(page)}>
+              {page}
+            </button>
+          </li>
+        ))}
       </ul>
     </nav>
   );
